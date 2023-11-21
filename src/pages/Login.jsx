@@ -1,9 +1,16 @@
 import React from 'react'
 import pattern from "../assets/login/pattern.png"
 import { FaXTwitter } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate("/dashboard")
+    }
+
     return (
         <>
             <div className="bg-white flex lg:justify-between justify-center items-center lg:h-full md:h-screen vpt-20 ">
@@ -28,7 +35,7 @@ const Login = () => {
                                             </div>
                                             <p className='font-Roboto text-gray-600 text-sm'>I agree the <span className='font-extralight text-black underline'>Terms and Conditions</span></p>
                                         </div>
-                                        <button className="w-full bg-[#60a563] mt-7 py-3 rounded-md text-white text-xs font-Roboto">
+                                        <button className="w-full bg-[#60a563] mt-7 py-3 rounded-md text-white text-xs font-Roboto"  onClick={handleNavigate}>
                                             SIGN IN
                                         </button>
                                         <div className="flex flex-row justify-between mb-8 pt-8">
