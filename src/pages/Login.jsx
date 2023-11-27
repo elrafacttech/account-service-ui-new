@@ -1,7 +1,7 @@
 import React from 'react'
 import pattern from "../assets/login/pattern.png"
 import { FaXTwitter } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -35,7 +35,7 @@ const Login = () => {
                                             </div>
                                             <p className='font-Roboto text-gray-600 text-sm'>I agree the <span className='font-extralight text-black underline'>Terms and Conditions</span></p>
                                         </div>
-                                        <button className="w-full bg-[#60a563] mt-7 py-3 rounded-md text-white text-xs font-Roboto"  onClick={handleNavigate}>
+                                        <button className="w-full bg-[#60a563] mt-7 py-3 rounded-md text-white text-xs font-Roboto" onClick={handleNavigate}>
                                             SIGN IN
                                         </button>
                                         <div className="flex flex-row justify-between mb-8 pt-8">
@@ -64,7 +64,11 @@ const Login = () => {
                                                 </a>
                                             </div>
                                         </div>
-                                        <p className=" leading-relaxed text-grey-900 font-Roboto text-gray-500 md:text-base text-sm pt-5">Not registered?<a href="javascript:void(0)" className="font-bold text-grey-700 text-black"> Create Account</a></p>
+                                        <p className=" leading-relaxed text-grey-900 font-Roboto text-gray-500 md:text-base text-sm pt-5">Not registered?
+                                            <Link to="/signup">
+                                                <a href="javascript:void(0)" className="font-bold text-grey-700 text-black"> Create Account</a>
+                                            </Link>
+                                        </p>
                                     </form>
                                 </div>
                             </div>
