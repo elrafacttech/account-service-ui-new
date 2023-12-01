@@ -1,5 +1,5 @@
 import React from 'react'
-import pattern from "../assets/login/pattern.png"
+import pattern from "../assets/login/green_4.jpg"
 import { FaXTwitter } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -21,8 +21,8 @@ const Login = () => {
                                 <div className="flex items-center xl:p-10">
                                     <form className="flex flex-col w-full h-full pb-6 text-center bg-white rounded-3xl">
                                         <h3 className="mb-5 text-4xl font-extrabol text-dark-grey-900  font-Roboto text-[#60a563]">Sign In</h3>
-                                        <p className="mb-8 text-grey-700 lg:text-lg  font-Roboto">Enter your email and password to Sign In.</p>
-                                        <label for="email" className="mb-2 text-sm text-start text-grey-900 font-Roboto">Your Email</label>
+                                        <p className="mb-8 text-grey-700 lg:text-lg  font-Roboto"></p>
+                                        <label for="email" className="mb-2 text-sm text-start text-grey-900 font-Roboto">Email</label>
                                         <input id="email" type="email" placeholder="name@email.com"
                                             className="flex items-center lg:max-w-[430px] w-full px-5 py-3 mr-2 text-sm font-medium outline-non  mb-7  bg-grey-200 text-dark-grey-900 rounded-md border border-black" />
                                         <label for="email" className="mb-2 text-sm text-start text-grey-900 font-Roboto">Password</label>
@@ -47,22 +47,6 @@ const Login = () => {
                                                 <p className='font-Roboto text-gray-600 md:text-sm text-xs'>Subscribe me to newsletter</p>
                                             </div>
                                             <a href="javascript:void(0)" className="mr-4  md:text-sm text-xs font-medium text-purple-blue-500 font-Roboto">Forget password</a>
-                                        </div>
-
-                                        <div className='flex flex-col gap-5'>
-                                            <div className='w-full shadow-md bg-white h-12 rounded-md cursor-pointer hover:shadow-xl duration-75'>
-                                                <a className="flex items-center font-Roboto uppercase justify-center w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-grey-300 hover:bg-grey-400 focus:ring-4 focus:ring-grey-300">
-                                                    <img className="h-4 mr-2" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/motion-tailwind/img/logos/logo-google.png" alt="" />
-                                                    Sign in with Google
-                                                </a>
-                                            </div>
-
-                                            <div className='w-full shadow-md bg-white h-12 rounded-md cursor-pointer hover:shadow-xl duration-75'>
-                                                <a className="flex gap-2 items-center font-Roboto uppercase justify-center w-full py-4 mb-6 text-sm font-medium transition duration-300 rounded-2xl text-grey-900 bg-grey-300 hover:bg-grey-400 focus:ring-4 focus:ring-grey-300">
-                                                    <FaXTwitter size={18} />
-                                                    Sign in with Twitter
-                                                </a>
-                                            </div>
                                         </div>
                                         <p className=" leading-relaxed text-grey-900 font-Roboto text-gray-500 md:text-base text-sm pt-5">Not registered?
                                             <Link to="/signup">

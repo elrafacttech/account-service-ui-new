@@ -33,8 +33,73 @@ const Homepages = ({children}) => {
             <>
              {children}
             </>
-           ) :
-           
+           ) 
+           :(location.pathname === '/organisationdetails') ?(
+            <>
+            {children}
+            </>
+           ) 
+           :(location.pathname === '/sales') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/purchase') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/accounts') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/receipt') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/payment') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/income') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/productservice') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/addsales') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/addpurchase') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/addreceipt') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/addpayment') ? (
+            <>
+            {children}
+            </>
+           )
+           :(location.pathname === '/addproductservice') ? (
+            <>
+            {children}
+            </>
+           )
+           :
           <>
           </>
         }
