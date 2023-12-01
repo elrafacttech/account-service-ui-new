@@ -23,7 +23,7 @@ const Tables = () => {
                 <div className="mt-12 mb-8 flex flex-col gap-12">
                     <Card>
                         <CardHeader variant="gradient" color="gray" className="mb-8 p-6 bg-[#60a563] mx-4  -mt-6">
-                            <Typography variant="h6" color="white" className='font-Roboto'>
+                            <Typography variant="h6" color="white" className='font-Roboto' style={{ textAlign: 'center' }}>
                                 Authors Table
                             </Typography>
                         </CardHeader>

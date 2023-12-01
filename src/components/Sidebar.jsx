@@ -2,11 +2,14 @@ import React, { useContext, useState } from 'react'
 import { HiHome } from "react-icons/hi2";
 import { FaUserCircle } from "react-icons/fa";
 import { HiTableCells } from "react-icons/hi2";
-import { FaCircleUser } from 'react-icons/fa6';
+import { FaCircleUser, FaMoneyCheck } from 'react-icons/fa6';
 import { IoNotifications } from "react-icons/io5";
 import { Link, useLocation } from 'react-router-dom';
 import { LuMenu } from "react-icons/lu";
 import { NavbarContext } from '../context/NavbarContext';
+import {  MdAccountBalanceWallet, MdPayment, MdPointOfSale, MdProductionQuantityLimits } from 'react-icons/md';
+import { BiPurchaseTag, BiReceipt } from 'react-icons/bi';
+import { CgOrganisation } from 'react-icons/cg';
 
 
 const Sidebar = () => {
@@ -19,6 +22,15 @@ const Sidebar = () => {
     { to: "/dashboard", icon: <HiHome className='z-20' size={20} />, text: 'Dashboard' },
     { to: "/profile", icon: <FaCircleUser className='z-20' size={20} />, text: 'Profile' },
     { to: "/table", icon: <HiTableCells className='z-20' size={20} />, text: 'Tables' },
+    // { to: "/notifications", icon: <IoNotifications className='z-20' size={20} />, text: 'Notifications' },
+    { to: "/organisationdetails" ,icon : <CgOrganisation className='z-20' size={20} />, text: 'OrganisationDetails' },
+    { to: "/sales", icon: <MdPointOfSale className= 'z-20' size={20} /> , text: 'Sales'},
+    { to: "/purchase", icon: <BiPurchaseTag className= 'z-20' size={20} />, text:'Purchase'},
+    { to: "/accounts", icon: < MdAccountBalanceWallet className= 'z-20' size={20} />, text: 'Accounts'},
+    { to: "/receipt", icon: < BiReceipt className = 'z-20' size={20} />, text: 'Receipt'},
+    { to: "/payment", icon: < MdPayment className='z-20' size={20} />, text: 'Payment'},
+    { to: "/income", icon: <FaMoneyCheck className = 'z-20' size={20} />, text: 'Income'},
+    { to: "/productservice", icon: <MdProductionQuantityLimits className='z-20' size={20} />,text: 'ProductService'}, 
     { to: "/notifications", icon: <IoNotifications className='z-20' size={20} />, text: 'Notifications' },
   ]);
 
@@ -30,11 +42,11 @@ const Sidebar = () => {
     {
       showSidebar ? 
       <>
-      <div className='w-[288px] bg-[#ffffff] h-[calc(100vh-2rem)] rounded-xl border border-gray-300 '>
+      <div className='w-[288px] bg-[#ffffff] h-[calc(100vh-2rem)] rounded-xl border border-gray-300 overflow-y-scroll '>
         <div className='p-4'>
-          <h3 className='font-Roboto text-[#263238] font-medium text-center pt-2'>Material Tailwind React</h3>
+          <h3 className='font-Roboto text-[#263238] font-medium text-center pt-2'>Accounts</h3>
 
-          <section className='p-4 pt-[55px] flex flex-col gap-[30px] justify-center'>
+          <section className='p-4 pt-[55px] flex flex-col gap-[30px] justify-center '>
 
             {links.map((link, index) => (
               <Link to={link.to} key={index}>
@@ -48,7 +60,7 @@ const Sidebar = () => {
               </Link>
             ))}
 
-            <div className='pt-4'>
+            {/* <div className='pt-4'>
               <h1 className='font-Roboto font-extrabold text-sm text-[#60696d]'>AUTH PAGES</h1>
 
               <section className=' pt-6 flex flex-col gap-[30px] justify-center'>
@@ -68,16 +80,16 @@ const Sidebar = () => {
                   </div>
                 </Link>
               </section>
-            </div>
+            </div> */}
           </section>
         </div>
       </div>
       </>
        :
       <>
-      <div className='w-[288px] bg-[#ffffff] h-[calc(100vh-2rem)] rounded-xl border border-gray-300 lgxl:block hidden'>
+      <div className='w-[288px] bg-[#ffffff] h-[calc(100vh-2rem)] rounded-xl border border-gray-300 lgxl:block hidden overflow-y-scroll'>
         <div className='p-4'>
-          <h3 className='font-Roboto text-[#263238] font-medium text-center pt-2'>Material Tailwind React</h3>
+          <h3 className='font-Roboto text-[#263238] font-medium text-center pt-2'>Accounts</h3>
 
           <section className='p-4 pt-[55px] flex flex-col gap-[30px] justify-center'>
 
@@ -93,7 +105,7 @@ const Sidebar = () => {
               </Link>
             ))}
 
-            <div className='pt-4'>
+            {/* <div className='pt-4'>
               <h1 className='font-Roboto font-extrabold text-sm text-[#60696d]'>AUTH PAGES</h1>
 
               <section className=' pt-6 flex flex-col gap-[30px] justify-center'>
@@ -113,7 +125,7 @@ const Sidebar = () => {
                   </div>
                 </Link>
               </section>
-            </div>
+            </div> */}
           </section>
         </div>
       </div>
