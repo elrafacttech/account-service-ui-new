@@ -45,8 +45,8 @@ const Login = () => {
                                                     <div className=' absolute z-10 w-12 h-12 rounded-full group-hover:bg-gray-100 duration-150'></div>
                                                 </div>
                                                 <p className='font-Roboto text-gray-600 md:text-sm text-xs'>Subscribe me to newsletter</p>
+                                                <a href="javascript:void(0)" className="mr-4  md:text-sm text-xs font-medium text-purple-blue-500 font-Roboto">    Forget password</a>
                                             </div>
-                                            <a href="javascript:void(0)" className="mr-4  md:text-sm text-xs font-medium text-purple-blue-500 font-Roboto">Forget password</a>
                                         </div>
                                         <p className=" leading-relaxed text-grey-900 font-Roboto text-gray-500 md:text-base text-sm pt-5">Not registered?
                                             <Link to="/signup">
